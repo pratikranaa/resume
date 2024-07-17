@@ -85,23 +85,14 @@
     {\textbf{#1}} {(\sl #2)}\hfill
     \ifx&#3&%
     % #3 is empty
-    \link{#4}{Github}\\
+    \link{#4}{Link}\\
     \else
     % #3 is nonempty
-    \linkFont{\href{#3}{Live Preview}~|~\href{#4}{Github}}\\
+    \linkFont{\href{#3}{Live Preview}~|~\href{#4}{Link}}\\
     \fi
     \vspace{2pt}
     \begin{itemize}
         #5
-    \end{itemize}
-}
-
-\newcommand{\playstoreProjectItem}[4]{
-    {\textbf{#1}} {(\sl #2)}\hfill
-    \linkFont{\href{#3}{Playstore}}\\
-    \vspace{2pt}
-    \begin{itemize}
-        #4
     \end{itemize}
 }
 
@@ -121,17 +112,12 @@
 % ----------- Profile -----------
 
 \begin{center}
-    {\textbf{\Huge \scshape Akshat Aggarwal}} \\ \vspace{1pt}
+    {\textbf{\Huge \scshape Pratik Rana}} \\ \vspace{1pt}
     Himachal Pradesh, India \\
     \small \textcolor{black}{\raisebox{-0.1\height}\faPhone\
-        8580813320} ~ \href{mailto:pratikrana860@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{pratikrana860@gmail.com}}} ~
+        (+91) 8580813320} ~ \href{mailto:ranapratik507@outlook.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{ranapratik507@outlook.com}}} ~
     \href{https://www.linkedin.com/in/ranapratik/}{{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/ranapratik}}}  ~
     \href{https://github.com/pratikranaa}{{\raisebox{-0.2\height}\faGithub\ \underline{github.com/pratikranaa}}}
-    % \faPhone~(+91) 7876212728
-    % $\cdot$
-    % \link{mailto:akshataggarwal1411@gmail.com}{akshataggarwal1411@gmail.com}
-    % $\cdot$
-    % \href{https://www.linkedin.com/in/akshataggarwal1411/}{Linked\faLinkedinSquare~Profile}
 \end{center}
 
 \vspace{-2mm}
@@ -144,194 +130,117 @@
 
 \header{Education}
 
-\educationItem{Plaksha University, Mohali}{Mohali, India}{Bachelor of Technology, Computer Science \& Artificial Intelligence}{CGPA: \textbf{7.99} (Gold medalist)}{August 2022 - May 2026}{
+\educationItem{Plaksha University, Mohali}{Mohali, India}{Bachelor of Technology, Computer Science \& Artificial Intelligence}{\textbf{CGPA:} 7.99}{August 2022 - May 2026}{
     \tinyBulletSep
-    \textit{\underline{Coursework}: Data Structure \& Algorithms, Database Management Systems, Computer Networks, Operating Systems, Compiler Design, Object-Oriented Programming, Distributed Systems, Software Engineering}
-
+    \textit{\underline{Coursework}: Data Structure, Algorithms, Database Management, Machine Learning, Computer Networks, Operating Systems, Object-Oriented Programming, Distributed Systems, Software Engineering, Data Analysis}
 }
-% \bulletSep
 
-% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Higher Secondary (12th)}{Percentage: \textbf{97}}{Apr 2019 - Mar 2020}
-% \bulletSep
-
-% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Secondary (10th)}{Percentage: \textbf{94.4}}{Apr 2017 - Mar 2018}
 \sectionSep
 
 % ----------- Work Experience -----------
 
-\header{Work Experience}
+\header{Experience}
 
-\experienceItem{Salesforce}{Bengaluru, India}{Associate Member of Technical Staff}{Jun 2024 - Present}{
+\experienceItem{Havells India (R\&D)}{Noida, India}{ML Research Intern}{June 2024 - Present}{
+\begin{itemize}
+    \item Developed a time series forecasting model using darts \& TFlow, improving sales prediction accuracy by 12\%.
+    \item Crafted a scalable data pipeline using Apache Spark, processing historical sales data of over 60 SKUs for training.
+    \item Integrated the sales forecasting tool with existing company systems, reducing manual data-entry time by 60\%.
+\end{itemize}
 }
 \bulletSep
 
-\experienceItem{Cisco}{Bengaluru, India}{Software Engineer Intern}{Jan 2024 - Jun 2024}{
+\experienceItem{Smart Code Labs}{Ludhiana, India}{Data Science Intern}{May 2023 - July 2023}{
     \begin{itemize}
-        \item Contributed to the \textbf{Secure Cloud Control (SCC v2)} project in the \textbf{XDR team}.
-        \item Conducted functional and automated testing with \textbf{Jest}, \textbf{Playwright}, and \textbf{Cypress}.
-        \item Performed client-side performance testing, providing insights by comparing SCC v1 and SCC v2.
-        \item Automated PR notifications using Webex APIs and integrated micro-apps with \textbf{Webpack Module Federation}.
-        \item Identified and resolved multiple bugs in the internal UI library and other products.
+        \item Engineered churn prediction models using sklearn and XGBoost, improving customer retention by 8\%.
+        \item Developed real-time dashboards visualizing business metrics, enabling a 12\% revenue increase for a retail client.
+        \item Optimized data pipelines with parallel processing, reducing weekly pre-processing time from 5 to 2 hours.
+
     \end{itemize}
 }
-\bulletSep
-
-\experienceItem{Scaler}{Remote}{Problem Setter Intern}{Sep 2023 - Dec 2023}{
-    \begin{itemize}
-        \item \textbf{Curated} and \textbf{reviewed} several CP problems for various hiring challenges and the InterviewBit platform.
-        \item \textbf{Tested} problems and improved user guides for better problem-solving.
-    \end{itemize}
-}
-\bulletSep
-
-% \experienceItem{Coding Ninjas}{Remote}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
-%     \begin{itemize}
-%         \item Created \textbf{high-quality} content covering a wide range of programming languages, frameworks, and tools.
-%         \item Authored and edited over 30 \textbf{technical blog posts, tutorials}, etc., aimed at helping students learn and improve.
-%     \end{itemize}
-% }
-
-% \bulletSep
-
-% \experienceItem{Coding Shuttle}{Remote}{Problem Setter}{Feb 2023 - Mar 2023}{
-%     \item Generated test cases and optimal solutions for problems based on \textbf{Data Structures and Algorithms}.
-% }
 \sectionSep
 
 % ----------- Skills -----------
 
 \header{Skills}
-% [t] option means top
-\begin{minipage}[t]{0.51\textwidth}
-    \begin{tabular}{@{}ll}
-        \textbf{Languages} & C, C++, Python, JavaScript, TypeScript, Go \\
-        \textbf{Databases} & MySQL, MongoDB                             \\
-        \textbf{Others}    & Bash, Markdown, Latex, Webpack, Swagger
-    \end{tabular}
-    % Column 1
-    % , Go, MATLAB
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.47\textwidth}
-    % Column 2
-    % React, 
-    \begin{tabular}{@{}ll}
-        \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI \\
-        \textbf{Tools}      & Git, GNU/Linux, Postman, AWS        \\
-        \textbf{}           &                                     \\
-    \end{tabular}
-\end{minipage}
+
+\textbf{Languages:} Python, C/C++, JavaScript, Bash, SQL (PostgreSQL, MySQL) 
+\\
+\textbf{Frameworks:} Django, Flask, Express, React, LangChain, FastAPI \\
+\textbf{Tools/Tech:} Unix/Linux, Git, GCP, AWS, Node.js, Docker, HuggingFace, Postman, PowerBi, Jupyter, Mongodb \\
+\textbf{Others:} PyTorch, Tensorflow, scikit-learn, Pandas, Shell Scripting, Natural Language Processing, Deep Learning
+
 \sectionSep
 
 % ----------- Projects -----------
 
 \header{Projects}
 
-\playstoreProjectItem{Cardiocare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{https://play.google.com/store/apps/details?id=com.cardio.care}{
-    \item Steering \textbf{backend development} for Cardiocare, an app designed for doctors at \textbf{IGMC Shimla}, to optimize patient care and medical record management.
-    % \item Used \textbf{Swagger UI} to document APIs comprehensively, facilitating smooth collaboration among team members.
+\projectItem{NeuroTone.AI}{ML for Neurological Disorder Detection | Dr. Siddharth} {}{https://ai3011.plaksha.edu.in/spring2024.html\#parkinson}{
+    \item Led a 4-person team to develop an audio-based Parkinson's detection model (87.46\% accuracy).
+    \item Implemented multi-layer Neural Network architecture, improving detection precision by 15\% over previous models.
+    \item World's first Parkinson's detection model that supports both English/Italian speech samples with >80\% accuracy.
 }
 \bulletSep
 
-% \projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
-%     \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
-%     \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
-% }
-% \bulletSep
-
-\projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
-    \item Developed a comprehensive paint application with \textbf{user-friendly graphical interface}, allowing users to create digital art effortlessly.
-    \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
+\projectItem{ImageCraft}{Full-stack AI Image Processing Platform | Pytorch, Flask, React, Docker | Open Source}{}{https://github.com/pratikranaa/imagecraft}{
+    \item Implemented image classification (82\% accuracy) using MobileNetV3, fine-tuned on a dataset of 10000+ images.
+    \item Created an image-to-text captioning model (0.74 BLEU score) based on ViT-GPT-2 using the COCO dataset.
+    \item Built a distributed Flask backend with Celery for concurrent request handling, improving throughput by 3x.
+    \item Containerized the application using Docker and deployed it on Docker hub and GKE for seamless scaling.
 }
 \bulletSep
 
-\projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
-    \item Created a web application to visualize various sorting algorithms, helping users understand how they work.
-    \item Implemented \textbf{Interactive UI} features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
+\projectItem{PodPit}{AI-driven podcast generation platform | Llama2, React, Flask, TailwindCSS | HackPlaksha’24}{}{https://devfolio.co/projects/podnews-1159}{
+    \item Engineered an end-to-end AI podcast creation platform that generates 20-minute podcasts in just 3 minutes.
+    \item Integrated Llama2 for NLG, gTTS, and RVC for voice cloning, achieving human-like voice (MOS score: 4.2/5).
+    \item Deployed JWT tokens for user authentication: personalized accounts for users to save their podcast preferences.
 }
-% \bulletSep
 
-% \projectItem{React Wordle}{React, CSS3}{https://wordle-with-react.netlify.app/}{https://github.com/AkshatAggarwal14/react-wordle}{
-%     \item Created a web-based \textbf{word-guessing} game where users can guess a hidden word by entering their guesses.
-%     \item Implemented animations and media queries to enhance the user experience.
-% }
 \sectionSep
 
-% ----------- Achievements -----------
+%---------------Achievements--------------
 
 \header{Achievements}
 
-\image{icpc} \textbf{ICPC} | Achieved recognition as an ICPC 2023 Regionalist with team \textbf{\link{https://icpc.global/ICPCID/6IIRHHSFPAXF}{Deadlock}}, demonstrating exceptional algorithmic problem-solving skills
-\tinyBulletSep
+\image{airtel} \textbf{Bharti Airtel Scholar:} Awarded By the Bharti Airtel Foundation. One of the 58 scholars nationwide.
+\hfill \link{https://bhartifoundation.org/bharti-airtel-scholarship/}{Link}
+\bulletSep
 
-\image{cisco} \textbf{Cisco} | Selected as one of \textbf{23} finalist teams for\textbf{\link{https://drive.google.com/file/d/1eBcJ4Ax0QHJq6Kb9MObrU1M9dQ7qvvbI/view?usp=sharing}{Code with Cisco}}codathon out of over \textbf{60,000} participants.
-\tinyBulletSep
+\image{UN} \textbf{UN Fellow:} Chosen from 44,000+ global applicants for leadership in addressing United Nations SDGs.
+\hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link}
+\bulletSep
 
-\image{cc} \textbf{CodeChef} -\textbf{\link{https://www.codechef.com/users/master_mind14}{master\_mind14}}
-\begin{itemize}
-    \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}.
-    \item Ranked among the top \textbf{400} out of \textbf{2,00,000+} Indian users.
-    \item Ranked\textbf{\link{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th}}globally out of \textbf{2900+} participants in \textbf{March Cook-Off 2022 Div-2}.
-\end{itemize}
-\tinyBulletSep
 
-\image{cf} \textbf{Codeforces} -\textbf{\link{https://codeforces.com/profile/master._.mind}{master.\_.mind}}
-\begin{itemize}
-    \item Achieved the title of \textbf{Expert} with a peak rating of \textbf{1671}.
-    \item Ranked\textbf{\link{https://codeforces.com/contest/1729/standings/participant/140098304\#p140098304}{143rd}}globally (39th in India) out of \textbf{18,000+} participants in \textbf{Codeforces Round 820}.
-\end{itemize}
-\tinyBulletSep
+\image{IBM} \textbf{IBM Quantum Qiskit Summer School'24:} Gaining hands-on experience with Qiskit framework and implementing quantum computing algorithms. Explored applications in optimization, and machine learning.
+\hfill \link{https://www.ibm.com/quantum/blog/qiskit-summer-school-2024}{Link}
 
-\image{lc} \textbf{Leetcode} -\textbf{\link{https://leetcode.com/AkshatAggarwal14/}{AkshatAggarwal14}}
-\begin{itemize}
-    \item Ranked among top \textbf{1.6\%} users on Leetcode with a maximum Rating of \textbf{2112}
-    \item Ranked\textbf{\link{https://clist.by/standings/biweekly-contest-91-38396296/?country=IN}{99th}}globally (5th in India) out of over \textbf{18,000} participants in \textbf{Biweekly Contest 91}.
-\end{itemize}
-\tinyBulletSep
+\bulletSep
+\image{rf} \textbf{Reliance Scholar:} Selected out of 40,000+ applicants nationwide for academic and leadership excellence. \hfill \link{https://www.scholarships.reliancefoundation.org/UG_Scholarship.aspx}{Link}
 
-% https://clist.by/standings/kick-start-round-g-31261744/?find_me=45689030
-\image{google} \textbf{Google} | Ranked\textbf{\link{https://drive.google.com/file/d/1cAIdPLOMWYXWl6qaP8iQeVJv8y2TtfIG/view}{318th}}out of \textbf{12,000+} participants in \textbf{Google Kickstart} 2022 Round G.
-\tinyBulletSep
 
-\image{stopstalk} \textbf{StopStalk} | Solved more than\textbf{\link{https://www.stopstalk.com/user/profile/master_mind14}{3000}}programming problems across all coding platforms.
+%------------Leadership--------------
 
 \sectionSep
 
-% ----------- Coursework -----------
-% \header{Coursework}
-% \begin{minipage}[t]{0.4\textwidth}
-%     % Column 1
-%     Data Structures \& Algorithms\\
-%     Database Management Systems
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.25\textwidth}
-%     % Column 2
-%     Computer Networks\\
-%     Operating Systems
-%     % Compiler Design
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.3\textwidth}
-%     % Column 3
-%     Object Oriented Programming\\
-%     Distributed Systems
-% \end{minipage}
-% \hfill
-% \sectionSep
+\header{Leadership \& Extracurricular}
 
-% ----------- Volunteer Experience -----------
+\volunteerItem{Open Source | GSSOC'24}{Conributor}{}{
+\item Contributed to more than 8 organizations, resolving 25+ issues in AI/ML and Python backend projects. \hfill \link{https://gssoc.girlscript.tech/}{Link}}
 
-% \header{Volunteer Experience}
+\bulletSep
 
-% \volunteerItem{CSEC NIT Hamirpur}{Coordinator}{Apr 2021 - Present}{
-%     \item Designed problems for monthly programming contest and Conducted programming meets on various topics.
-% }
+\volunteerItem{Healthec.AI}{Project Lead}{}{    
+\item Led a team of 6 and developed a remote healthcare platform, to increase healthcare access in the rural areas of Himachal. 
+\item Recognized at United Nations and IIT Mandi's Himalayan Startup Trek 2023.\hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link}}
 
-% \bulletSep
 
-% \volunteerItem{CodeChef NIT Hamirpur Chapter}{Chapter Leader}{Jul 2021 - Jan 2022}{
-%     \item Conducted numerous programming contests and organized workshops (100+ attendees each).
-% }
+\bulletSep
+\volunteerItem{Giving back to society}{Volunteer Teacher}{}{\item Organised Workshops for career counselling and tutored underprivileged Grade X/XI/XII students around Tricity. }
+
+% \tinyBulletSep
+% \textbf{Health Care Volunteer:} Assisted in establishing first-stop checkpoints at CHCs in Kangra District and facilitated vaccination registrations for the initiatives sponsored by the WHO, UNICEF India, and CBSE. \link{https://linktr.ee/pratikrana}{[Link]}
+
+
 
 \end{document}
