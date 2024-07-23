@@ -1,9 +1,12 @@
-\documentclass[letterpaper]{article}
+\documentclass[letterpaper, 10.5t]{article}
 \usepackage{hyperref}
 \usepackage{enumitem}
 
+
 \usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.45in]{geometry}
 % \usepackage[scale=0.95]{tgschola}
+% \usepackage{fontspec} % For custom fonts
+% \setmainfont{Lato} % Set Lato as the mai
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -11,6 +14,15 @@
 \usepackage{graphicx}
 
 
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
 \pagenumbering{gobble}
 
@@ -60,7 +72,7 @@
 
 \newcommand{\educationItem}[6]{
     \textbf{#1}\hfill #2\\
-    \textit{#3}, \textit{#4} \hfill \textit{#5}\\
+    \textit{#3} \textit{#4} \hfill \textit{#5}\\
     #6
 }
 
@@ -108,7 +120,6 @@
     \endgroup
 }
 
-
 % ----------- End of definitions -----------
 
 \begin{document}
@@ -121,7 +132,7 @@
     % {\raisebox{-0.1\height}\faHome\ Chandigarh, India} ~
     
     \small \textcolor{black}{\raisebox{-0.1\height}\faPhone\
-        (+91) 8580813320} ~ \href{mailto:pratikrana862@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{pratikrana862@gmail.com}}} ~
+        (+91) 8580813320} ~ \href{mailto:pratikrana859@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{pratikrana859@gmail.com}}} ~
     \href{https://www.linkedin.com/in/ranapratik/}{{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/ranapratik}}}  ~
     \href{https://github.com/pratikranaa}{{\raisebox{-0.2\height}\faGithub\ \underline{github.com/pratikranaa}}} 
 \end{center}
@@ -136,9 +147,10 @@
 
 \header{Education}
 
-\educationItem{Plaksha University, Mohali}{Mohali, India}{Bachelor of Technology, Computer Science \& Artificial Intelligence}{}{August 2022 - May 2026}{
-    \vspace{0.5mm}
-    \textit{\textbf{Coursework} | Data Structure, Algorithms, Database Management, Machine Learning, Computer Networks, Operating Systems, Object-Oriented Programming, Distributed Systems, Software Engineering, Data Mining}
+\educationItem{Plaksha University}{Mohali, India}{Bachelor of Technology, Computer Science \& Artificial Intelligence}{}{August 2022 - May 2026}{
+    \vspace{0.7mm}
+
+    \textit{\textbf{Coursework} | Data Structures, Algorithms, Object-Oriented Programming, DBMS, AI \& ML, Computer Networks, OS.}
 }
 
 \sectionSep
@@ -147,24 +159,28 @@
 
 \header{Experience}
 
-\experienceItem{Havells India (R\&D)}{May 2024 - July 2024}{ML Research Intern}{Noida, India}{
+\experienceItem{Havells India}{May 2024 - July 2024}{ML Research Intern}{Noida, India}{
 \begin{itemize}
-    \item Developed a \textbf{sales forecasting model} using \textbf{SARIMA}, \textbf{statsmodels} \& \textbf{Tensorflow}, improving the \textbf{prediction accuracy by 22\%}, aiding in the inventory management \& and strategic planning.
-    \vspace{0.5mm}
-    \item Conducted \textbf{exploratory data analysis \& feature engineering} to improve model accuracy and robustness.
-    \vspace{0.5mm}
+    \vspace{0.7mm}
+    \item Developed a \textbf{sales forecasting model} by implementing SARIMA, ARIMA \& ETS algorithms that improved the sales prediction \textbf{accuracy by 12\%}, aiding in the inventory management. 
+    % \& strategic planning.
+    \vspace{0.7mm}
+    
+    \item Conducted \textbf{exploratory data analysis}, including plotting time series, checking for stationarity using \textbf{ADF test}, and applying differencing techniques to prepare sales data of \textbf{60 SKUs} for modelling. 
+    \vspace{0.7mm}
 
-    \item Crafted a \textbf{scalable data pipeline} using \textbf{Apache Spark}, processing data of over \textbf{60 SKUs} for model training.
-    \vspace{0.5mm}
+    \item Utilized \textbf{rolling window} approach, \textbf{ensemble method}, and \textbf{cross-validation} to evaluate \& optimize models.
+    \vspace{0.7mm}
 
-    \item Developed \textbf{RESTful APIs} for data analytics, improving \textbf{data retrieval speed by 30\%} and reducing latency.
-    \vspace{0.5mm}
+    \item Implemented \textbf{grid search} to optimize model parameters(\textbf{p, d, q, lags}) and benchmarked multiple models (ARIMA, SARIMA, Theta, Croston, XGBoost) to identify the best-performing model for each SKU.
+    \vspace{0.7mm}
 
-    \item Collaborated with \textbf{cross-functional teams} to integrate machine learning models into the \textbf{production environment}, ensuring seamless operation and high availability.
+    \item Collaborated with \textbf{cross-functional teams} to deploy ML models into the \textbf{production environment}.
     \tinyBulletSep
+    
 
 \end{itemize}
-\textbf{Tech Used |} ML, API Development, Apache Spark, Cloud Computing (AWS S3), Optimization, Scalability, Python.
+\textbf{Tech Used |} ML, API Development, Cloud Computing (AWS S3, Sagemaker), Optimization, Scalability, Python, Darts.
 }
 
 \sectionSep
@@ -196,19 +212,20 @@
 \begin{itemize}[left=0pt, label={\raisebox{0.25ex}{\tiny$\bullet$}}]
     \item \textbf{Airtel Scholar |} Awarded By the Bharti Airtel Foundation. One of the \textbf{58 scholars nationwide}. \hfill \link{https://bhartifoundation.org/bharti-airtel-scholarship/}{Link} \\
     
-    \vspace{0.5mm}
+    \vspace{1mm}
     
     \item \textbf{UN Fellow |} Chosen from 44,000+ global applicants for leadership \& tech solutions addressing the \textbf{UN SDGs}. \hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link} \\
     
-    \vspace{0.5mm}
+    \vspace{1mm}
     
-    \item \textbf{Winner @ HackPlaksha'24 |} \textbf{1st runner} up in the Hackathon. Developed PodPit in under 48 hours. \hfill \link{https://devfolio.co/projects/podnews-1159}{Link} \\
+    \item \textbf{Winner @ HackPlaksha'24 |} \textbf{1st runner} up in the Hackathon. Designed PodPit in under 48 hours. \hfill \link{https://devfolio.co/projects/podnews-1159}{Link} \\
     
-    \vspace{0.5mm}
+    \vspace{1mm}
     
     \item \textbf{Reliance UG Scholar |} Selected out of 40,000+ applicants nationwide for academic \& leadership excellence. \hfill \link{https://www.scholarships.reliancefoundation.org/UG_Scholarship.aspx}{Link} \\
 
-    \vspace{0.5mm}
+    \vspace{1mm}
+    
 
     \item \textbf{IBM Quantum Qiskit Summer School'24 |} Gaining hands-on experience with \textbf{Qiskit framework} and implementing \textbf{quantum computing} algorithms. Explored applications in optimization, and machine learning. \hfill \link{https://www.ibm.com/quantum/blog/qiskit-summer-school-2024}{Link} \\
     
@@ -222,32 +239,40 @@
 \header{Projects}
 
 \projectItem{NeuroTone.AI}{ML for Neurological Disorder Detection | Dr. Siddharth} {}{https://ai3011.plaksha.edu.in/spring2024.html\#parkinson}{
-    \item \textbf{Led a 4-person team} to develop an \textbf{audio-based Parkinson's detection model} with \textbf{87.46\% accuracy}.     \vspace{0.5mm}
+
+    \item Led a 4-person team to develop an \textbf{audio-based Parkinson's detection model} with \textbf{87.46\% accuracy}.     
+    \vspace{0.7mm}
 
 
-    \item Implemented a \textbf{LSTM \& RNN based architecture}, improving \textbf{precision by 15\%} over previous models.     \vspace{0.5mm}
+    \item Implemented a \textbf{LSTM} \& \textbf{RNN} based architecture, improving \textbf{precision by 15\%} over previous models.     \vspace{0.7mm}
 
     \item \textbf{World's first multilingual} Parkinson's detection model, maintaining \textbf{>80\% accuracy} across three languages.
 }
+
+ % \vspace{2.2mm}
 \bulletSep
 
-\projectItem{ImageCraft}{Full-stack AI Image Processing Platform | Pytorch, Flask, React, Docker | Open Source}{}{https://github.com/pratikranaa/imagecraft}{    
+\projectItem{ImageCraft}{Full-stack Image Processing Platform | Pytorch, Flask, React, Docker | Open Source}{}{https://github.com/pratikranaa/imagecraft}{   
 
-    \item Implemented \textbf{image classification} (\textbf{82\% accuracy}) using \textbf{MobileNetV3}, fine-tuned on \textbf{15000+ images}.     \vspace{0.5mm}
 
-    \item Created an \textbf{image-to-text captioning} model (\textbf{0.74 BLEU}) score based on \textbf{ViT-GPT-2} and \textbf{COCO dataset}.     \vspace{0.5mm}
+    \item Designed \textbf{image classification} model (\textbf{82\% accuracy}) using \textbf{MobileNetV3}, fine-tuned it on a custom dataset.     \vspace{0.7mm}
 
-    \item Reduced API response time by \textbf{3x} by building a \textbf{distributed Flask backend} for concurrent request handling.     \vspace{0.5mm}
+    \item Created an \textbf{image-to-text} captioning model with (\textbf{0.74 BLEU}) score, based on \textbf{ViT-GPT-2} \& COCO dataset.     \vspace{0.7mm}
 
-    \item \textbf{Containerized the application} using \textbf{Docker} and deployed it on \textbf{Docker Hub} and \textbf{GKE} for seamless scaling.
+    \item Reduced API response time by \textbf{3x} by building a \textbf{distributed Flask backend} for concurrent request handling.     
+
+    % \item \textbf{Containerized the application} using \textbf{Docker} and deployed it on \textbf{Docker Hub} and \textbf{GKE} for seamless scaling.
 }
+% \bulletSep
 \bulletSep
+
 
 \projectItem{PodPit}{AI-driven podcast generation platform | Llama2, React, Flask, TailwindCSS | HackPlaksha’24}{}{https://devfolio.co/projects/podnews-1159}{
 
-    \item Engineered an end-to-end \textbf{AI podcast  platform} that generates \textbf{20-minute podcasts} in just \textbf{3 minutes}.     \vspace{0.5mm}
 
-    \item Integrated \textbf{Llama2} for \textbf{Natural Language Generation}, \textbf{gTTS}, and \textbf{RVC} for human like voice quality.    \vspace{0.5mm}
+    \item Engineered an end-to-end \textbf{AI podcast  platform} that generates \textbf{20-minute podcasts} in just \textbf{3 minutes}.     \vspace{0.7mm}
+
+    \item Integrated \textbf{Llama2} for \textbf{Natural Language Generation}, \textbf{gTTS}, and \textbf{RVC} for human like voice quality.    \vspace{0.7mm}
 
     \item Enhanced user experience with \textbf{personalized accounts} by implementing \textbf{JWT token-based authentication}.
 }
@@ -260,35 +285,38 @@
 
 \header{Skills}
 
-% \textbf{Languages |} Python, C/C++, JavaScript, Bash, MATLAB, HTML/CSS, SQL (PostgreSQL) 
-% \\
-% \textbf{Frameworks |} Django, Flask, Express.js, React, LangChain, FastAPI, TailwindCSS, Next.js \\
-% \textbf{Tools/Tech |} Unix/Linux, Git, GCP, AWS(S3, Sagemaker, EC2), Node.js, Docker, HuggingFace, Postman, Mongodb \\
+\textbf{Languages |} Python, C/C++, JavaScript, Bash, MATLAB, HTML/CSS, SQL (PostgreSQL)
+\\
+\textbf{Frameworks |} Django, Flask, Express.js, React, LangChain, TailwindCSS, Next.js \\
+\textbf{Tools/Tech |} Unix/Linux, Git, GCP, AWS (S3, SageMaker, EC2), Docker, HuggingFace, Postman, MongoDb
 % \textbf{Others |} PyTorch, Tensorflow, scikit-learn, Pandas, Shell Scripting, Natural Language Processing, Deep Learning
 
-
-
-
-\begin{tabular}{ p{2.2cm} p{16cm} }
-    \textbf{Languages} & Python, C/C++, JavaScript, Bash, MATLAB, HTML/CSS, SQL (PostgreSQL) \\
-    \textbf{Frameworks} & Django, Flask, Express.js, React, LangChain, FastAPI, TailwindCSS, Next.js \\
-    \textbf{Tools/Tech} & Unix/Linux, Git, GCP, AWS (S3, SageMaker, EC2), Node.js, Docker, HuggingFace, Postman, MongoDB \\
-    \textbf{Others} & PyTorch, TensorFlow, scikit-learn, Pandas, Shell Scripting, Natural Language Processing, Gen. AI
-\end{tabular}
+% \begin{tabular}{ l l }
+%     \textbf{Languages} & Python, C/C++, JavaScript, Bash, MATLAB, HTML/CSS, SQL (PostgreSQL) \\
+%     \textbf{Frameworks} & Django, Flask, Express.js, React, LangChain, TailwindCSS, Next.js \\
+%     \textbf{Tools/Tech} & Unix/Linux, Git, GCP, AWS (S3, SageMaker, EC2), Docker, HuggingFace, Postman, MongoDB \\
+%     % \textbf{Others} & PyTorch, TensorFlow, scikit-learn, Pandas, Shell Scripting, Natural Language Processing
+% \end{tabular}
 
 \sectionSep
 
 %------------Leadership--------------
 \header{Leadership \& Extracurricular}
 
-\volunteerItem{Open Source | GSSOC'24}{Conributor}{}{
+\volunteerItem{Open Source | GSSOC'24}{Contributor}{}{
+    \vspace{0.7mm}
+
 \item Contributed to more than \textbf{8 organizations}, resolving 25+ issues in AI/ML and Python backend projects. \hfill \link{https://gssoc.girlscript.tech/}{Link}}
 
 % Integrated the \textbf{forecasting tool} with existing company systems, reducing \textbf{manual data-entry time by 60\%}
 \bulletSep
 
 \volunteerItem{Healthec.AI}{Project Lead | Javascript, GPT3, Node.js, Nginx}{}{    
+    \vspace{0.7mm}
+
 \item Led a team of 6 and developed a \textbf{remote healthcare platform}, to increase \textbf{healthcare access in rural India}. 
+    \vspace{0.7mm}
+
 \item Recognized at \textbf{United Nations} and \textbf{IIT Mandi's} Himalayan Startup Trek 2023.\hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link}}
 
 
