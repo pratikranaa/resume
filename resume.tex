@@ -1,12 +1,9 @@
-\documentclass[letterpaper, 10.5t]{article}
+\documentclass[a4paper]{article}
 \usepackage{hyperref}
 \usepackage{enumitem}
 
-
 \usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.45in]{geometry}
 % \usepackage[scale=0.95]{tgschola}
-% \usepackage{fontspec} % For custom fonts
-% \setmainfont{Lato} % Set Lato as the mai
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -14,31 +11,18 @@
 \usepackage{graphicx}
 
 
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 \pagenumbering{gobble}
-
-
 
 % ----------- Config ------------
 
 \input{glyphtounicode}
 
 \hypersetup {
-    % pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
-    urlcolor     = black, %Colour for external hyperlinks
-    colorlinks   = true, %Colours links instead of ugly boxes
+    urlcolor     = black,
+    colorlinks   = true,
 }
 
-\setlist{nosep}
+\setlist[itemize]{topsep=1.2pt, itemsep=1pt, parsep=0pt}
 \raggedright
 
 \pdfgentounicode=1
@@ -55,7 +39,7 @@
 
 \newcommand{\bulletSep} { \vspace{1.5mm} }
 
-\newcommand{\sectionSep} { \vspace{2.5mm} }
+\newcommand{\sectionSep} { \vspace{\stretch{1}} }
 
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
@@ -72,7 +56,7 @@
 
 \newcommand{\educationItem}[6]{
     \textbf{#1}\hfill #2\\
-    \textit{#3} \textit{#4} \hfill \textit{#5}\\
+    \textit{#3}, \textit{#4} \hfill \textit{#5}\\
     #6
 }
 
@@ -100,10 +84,8 @@
 \newcommand{\projectItem}[5]{
     {\textbf{#1}} {(\sl #2)}\hfill
     \ifx&#3&%
-    % #3 is empty
     \link{#4}{Link}\\
     \else
-    % #3 is nonempty
     \linkFont{\href{#3}{Live Preview}~|~\href{#4}{Link}}\\
     \fi
     \vspace{2pt}
@@ -120,7 +102,6 @@
     \endgroup
 }
 
-% ----------- End of definitions -----------
 
 \begin{document}
 
@@ -128,13 +109,11 @@
 
 \begin{center}
     {\textbf{\Huge \scshape Pratik Rana}} \\ \vspace{1pt}
-    % Himachal Pradesh, India \\
-    % {\raisebox{-0.1\height}\faHome\ Chandigarh, India} ~
-    
+    Chandigarh, India \\
     \small \textcolor{black}{\raisebox{-0.1\height}\faPhone\
-        (+91) 8580813320} ~ \href{mailto:pratikrana859@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{pratikrana859@gmail.com}}} ~
+        (+91) 8580813320} ~ \href{mailto:pratikrana862@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{pratikrana862@gmail.com}}} ~
     \href{https://www.linkedin.com/in/ranapratik/}{{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/ranapratik}}}  ~
-    \href{https://github.com/pratikranaa}{{\raisebox{-0.2\height}\faGithub\ \underline{github.com/pratikranaa}}} 
+    \href{https://leetcode.com/u/ranapratik/}{{\raisebox{-0.2\height}\faCode\ \underline{leetcode.com/ranapratik}}}
 \end{center}
 
 \vspace{-2mm}
@@ -148,9 +127,8 @@
 \header{Education}
 
 \educationItem{Plaksha University}{Mohali, India}{Bachelor of Technology, Computer Science \& Artificial Intelligence}{}{August 2022 - May 2026}{
-    \vspace{0.7mm}
-
-    \textit{\textbf{Coursework} | Data Structures, Algorithms, Object-Oriented Programming, DBMS, AI \& ML, Computer Networks, OS.}
+    \tinyBulletSep
+    \textit{\underline{Coursework}: DSA, Distributed Systems, AI/ML, Computer Networks, Operating Systems, Software Engineering}
 }
 
 \sectionSep
@@ -159,29 +137,44 @@
 
 \header{Experience}
 
-\experienceItem{Havells India}{May 2024 - July 2024}{ML Research Intern}{Noida, India}{
+\experienceItem{Wayground (Quizizz) - EdTech platform with 65 million users}{May 2025 - July 2025}{Software
+Engineer Intern - Platform}{Bengaluru, India}{
+    \begin{itemize}
+    \item Improved page load performance by 8\% through feature flag cleanup, removing 215 LOC and archiving 155 flags
+    \item Reduced manual bug-fixing by 75\% by developing AI automation system that fixes 250+ production issues/month
+    % \item Achieved 82.5\% PR merge rate through FastAPI dashboard with real-time monitoring and Slack alerts integration
+    \item Achieved 82.5\% PR merge rate \& saved 40+ developer hrs/wk implementing FastAPI dashboard \& slack alerts 
+    
+    %\& real-time monitoring dashboard
+
+    % \item Built intelligent error filtering system that identified 7.4\% non-fixable issues, preventing unnecessary code changes 
+    % \item Built real-time monitoring dashboard processing 5.7K+ daily events for 3.2K+ users by integrating Sentry APIs with distributed analytics and cron-based workflows
+    \item Deployed the containerized solution on AWS EC2 with Docker, supporting automated large-scale processing
+    \end{itemize}
+}
+\bulletSep
+
+\experienceItem{Havells India Ltd.}{May 2024 - July 2024}{Software Engineer Intern - ML}{Noida, India}{
 \begin{itemize}
-    \vspace{0.7mm}
-    \item Developed a \textbf{sales forecasting model} by implementing SARIMA, ARIMA \& ETS algorithms that improved the sales prediction \textbf{accuracy by 12\%}, aiding in the inventory management. 
-    % \& strategic planning.
-    \vspace{0.7mm}
-    
-    \item Conducted \textbf{exploratory data analysis}, including plotting time series, checking for stationarity using \textbf{ADF test}, and applying differencing techniques to prepare sales data of \textbf{60 SKUs} for modelling. 
-    \vspace{0.7mm}
-
-    \item Utilized \textbf{rolling window} approach, \textbf{ensemble method}, and \textbf{cross-validation} to evaluate \& optimize models.
-    \vspace{0.7mm}
-
-    \item Implemented \textbf{grid search} to optimize model parameters(\textbf{p, d, q, lags}) and benchmarked multiple models (ARIMA, SARIMA, Theta, Croston, XGBoost) to identify the best-performing model for each SKU.
-    \vspace{0.7mm}
-
-    \item Collaborated with \textbf{cross-functional teams} to deploy ML models into the \textbf{production environment}.
-    \tinyBulletSep
-    
+    \item Developed sales forecasting model improving prediction accuracy by 12\% for inventory management of 90+ SKUs
+    \item Implemented grid search optimization to identify best-performing models, reducing computational time by 40\%
+    \item Collaborated with cross-functional teams to deploy ML REST APIs in production using scalable architecture
+    \item Processed large-scale sales data using distributed computing principles for real-time inventory predictions
+    % \item \textbf{Skills:} Backend Development, TensorFlow, Statsmodel, Frontend, GCP, Javascript, Python
 
 \end{itemize}
-\textbf{Tech Used |} ML, API Development, Cloud Computing (AWS S3, Sagemaker), Optimization, Scalability, Python, Darts.
 }
+% \bulletSep
+
+% \experienceItem{Smart Code Labs}{May 2023 - July 2023}{Data Science Intern}{Ludhiana, India}{
+%     \begin{itemize}
+%         \item Engineered a churn prediction model using random forest algorithm, improving customer retention by 5\%
+%         \item Optimized data cleaning pipelines with parallel processing, reducing processing time from 5 to 2 hours per week
+%         \item Created real-time dashboards visualizing key metrics, enabling an 8\% revenue increase for a retail client
+%         \item \textbf{Skills:} Data Science, API development, Cloud computing, Deployment, Software Scaling.
+%     \end{itemize}
+% }
+
 
 \sectionSep
 
@@ -189,48 +182,71 @@
 
 \header{Achievements}
 
-% \textbf{Airtel Scholar |} Awarded By the Bharti Airtel Foundation. One of the \textbf{58 scholars nationwide}.
-% \hfill \link{https://bhartifoundation.org/bharti-airtel-scholarship/}{Link} \\
-% \vspace{0.5mm}
+    \image{codeforce} \textbf{Competitive Programming:} Global Rank 304 in CodeChef 158D out of 26000+ participants \hfill 
+    \link{https://www.codechef.com/rankings/START158D?itemsPerPage=100&order=asc&page=1&search=pratikranaa&sortBy=rank}{Link}
 
-% \textbf{UN Fellow |} Chosen from 44,000+ global applicants for leadership \& tech solutions addressing the \textbf{UN SDGs}.
-% \hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link} \\
-% \vspace{0.5mm}
+\bulletSep
+    \image{Leetcode} \textbf{Problem Solving:} 400+ problems solved across GFG and Leetcode platforms (LeetCode Rating: 1642) \hfill 
+    \link{https://leetcode.com/u/ranapratik/}{Link}
+
+\bulletSep
+    \image{SIH} \textbf{Smart India Hackathon 2024:} Top 5 Nationwide for Gas Authority of India Limited’s problem statement\hfill 
+\link{https://www.linkedin.com/posts/ranapratik_excited-to-share-that-our-team-status-200-activity-7306364851298217984-DSg1?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBXcLYBo3NyHA3V4MuWErfYQBTEbWK9eEc}{Link}
+
+\bulletSep
+    \image{flipkart} \textbf{Flipkart Grid 6.0:}: Top 0.005\% out of 500,000+ participants in national software engineering competition\hfill 
+    \link{https://unstop.com/certificate-preview/9cb473f6-16d7-4f80-8c5d-f1b3598ddb7f}{Link}
+
+     \bulletSep
+    \image{hackerearth} \textbf{Hackerearth ML Challenge'25:}: Global Rank 7 out of 50,000+ participants in ML competition \hfill \link{https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-world-water-day/leaderboard/}{Link}
+
+    \bulletSep
+    \image{MOSPI} \textbf{Innovate with GoIStats:}: National Winner of Data Viz. Hackathon organized by Ministry of Stats \hfill \link{https://www.linkedin.com/posts/ministry-of-statistics-programme-implementation_hackathon-datafordevelopment-datavisualisation-activity-7345090514330804224-oimQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBXcLYBo3NyHA3V4MuWErfYQBTEbWK9eEc}{Link}
+
+\bulletSep
+\image{airtel} \textbf{Airtel Scholar:} Awarded by the Bharti Airtel Foundation. One of the 158 scholars nationwide \hfill \link{https://bhartifoundation.org/bharti-airtel-scholarship/}{Link}
+
+\bulletSep
+\image{UN} \textbf{UN Fellow:} Chosen from 44,000+ global applicants for tech solution addressing the United Nations SDGs \hfill \link{https://www.millenniumfellows.org/fellow/2023/pu/pratik-rana}{Link}
+
+\bulletSep
+\image{rf} \textbf{Reliance Scholar:} Selected out of 40,000+ applicants nationwide for academic \& leadership excellence \hfill \link{https://www.scholarships.reliancefoundation.org/UG_Scholarship.aspx}{Link}
 
 
-% \textbf{Winner @ HackPlaksha'24 |} \textbf{1st runner} up in the Hackathon. Developed PodPit in under 48 hours,
-% \hfill \link{https://devfolio.co/projects/podnews-1159}{Link} \\
-% \vspace{0.5mm}
 
-% \textbf{IBM Quantum Qiskit Summer School'24 |} Gaining hands-on experience with \textbf{Qiskit framework} and implementing \textbf{quantum computing} algorithms. Explored applications in optimization, and machine learning.
-% \hfill \link{https://www.ibm.com/quantum/blog/qiskit-summer-school-2024}{Link} \\
-% \vspace{0.5mm}
-
-
-% \textbf{Reliance UG Scholar |} Selected out of 40,000+ applicants nationwide for academic \& leadership excellence. \hfill \link{https://www.scholarships.reliancefoundation.org/UG_Scholarship.aspx}{Link} \\
-
-\begin{itemize}[left=0pt, label={\raisebox{0.25ex}{\tiny$\bullet$}}]
-    \item \textbf{Airtel Scholar |} Awarded By the Bharti Airtel Foundation. One of the \textbf{58 scholars nationwide}. \hfill \link{https://bhartifoundation.org/bharti-airtel-scholarship/}{Link} \\
-    
-    \vspace{1mm}
-    
-    \item \textbf{UN Fellow |} Chosen from 44,000+ global applicants for leadership \& tech solutions addressing the \textbf{UN SDGs}. \hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link} \\
-    
-    \vspace{1mm}
-    
-    \item \textbf{Winner @ HackPlaksha'24 |} \textbf{1st runner} up in the Hackathon. Designed PodPit in under 48 hours. \hfill \link{https://devfolio.co/projects/podnews-1159}{Link} \\
-    
-    \vspace{1mm}
-    
-    \item \textbf{Reliance UG Scholar |} Selected out of 40,000+ applicants nationwide for academic \& leadership excellence. \hfill \link{https://www.scholarships.reliancefoundation.org/UG_Scholarship.aspx}{Link} \\
-
-    \vspace{1mm}
     
 
-    \item \textbf{IBM Quantum Qiskit Summer School'24 |} Gaining hands-on experience with \textbf{Qiskit framework} and implementing \textbf{quantum computing} algorithms. Explored applications in optimization, and machine learning. \hfill \link{https://www.ibm.com/quantum/blog/qiskit-summer-school-2024}{Link} \\
-    
-    
-\end{itemize}
+        
+
+   
+
+\bulletSep
+    \image{GSSOC} \textbf{Open Source Contributor (GSSOC'24):}: Resolved 25+ issues across 8 organizations \hfill \link{https://gssoc.girlscript.tech/}{Link}
+
+    \bulletSep
+    \image{IIT} \textbf{Project Leadership:}: Led team of 6 developing healthcare platform, recognized at UN \& IIT Mandi \hfill \link{https://www.millenniumfellows.org/fellow/2023/pu/pratik-rana}{Link}
+
+% \image{airtel} \textbf{Bharti Airtel Scholar:} Awarded By the Bharti Airtel Foundation. One of the \textbf{58 scholars nationwide}.
+% \hfill \link{https://bhartifoundation.org/bharti-airtel-scholarship/}{Link}
+% \bulletSep
+
+% \image{UN} \textbf{UN Fellow:} Chosen from 44,000+ global applicants for leadership \& technology solutions addressing the \textbf{United Nations SDGs}.
+% \hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link}
+% \bulletSep
+
+
+% \image{plaksha} \textbf{Winner @ HackPlaksha:} \textbf{1st runner} up in the Hackathon. Developed PodPit in under 48 hours,
+% \hfill \link{https://devfolio.co/projects/podnews-1159}{Link}
+% \bulletSep
+
+% \image{IBM} \textbf{IBM Quantum Qiskit Summer School'24:} Gaining hands-on experience with \textbf{Qiskit framework} and implementing \textbf{quantum computing} algorithms. Explored applications in optimization, and machine learning.
+% \hfill \link{https://www.ibm.com/quantum/blog/qiskit-summer-school-2024}{Link}
+
+% \bulletSep
+% \image{rf} \textbf{Reliance Scholar:} Selected out of 40,000+ applicants nationwide for academic \& leadership excellence. \hfill \link{https://www.scholarships.reliancefoundation.org/UG_Scholarship.aspx}{Link}
+
+
+
 
 \sectionSep
 
@@ -238,86 +254,64 @@
 
 \header{Projects}
 
-\projectItem{NeuroTone.AI}{ML for Neurological Disorder Detection | Dr. Siddharth} {}{https://ai3011.plaksha.edu.in/spring2024.html\#parkinson}{
-
-    \item Led a 4-person team to develop an \textbf{audio-based Parkinson's detection model} with \textbf{87.46\% accuracy}.     
-    \vspace{0.7mm}
-
-
-    \item Implemented a \textbf{LSTM} \& \textbf{RNN} based architecture, improving \textbf{precision by 15\%} over previous models.     \vspace{0.7mm}
-
-    \item \textbf{World's first multilingual} Parkinson's detection model, maintaining \textbf{>80\% accuracy} across three languages.
-}
-
- % \vspace{2.2mm}
-\bulletSep
-
-\projectItem{ImageCraft}{Full-stack Image Processing Platform | Pytorch, Flask, React, Docker | Open Source}{}{https://github.com/pratikranaa/imagecraft}{   
-
-
-    \item Designed \textbf{image classification} model (\textbf{82\% accuracy}) using \textbf{MobileNetV3}, fine-tuned it on a custom dataset.     \vspace{0.7mm}
-
-    \item Created an \textbf{image-to-text} captioning model with (\textbf{0.74 BLEU}) score, based on \textbf{ViT-GPT-2} \& COCO dataset.     \vspace{0.7mm}
-
-    \item Reduced API response time by \textbf{3x} by building a \textbf{distributed Flask backend} for concurrent request handling.     
-
-    % \item \textbf{Containerized the application} using \textbf{Docker} and deployed it on \textbf{Docker Hub} and \textbf{GKE} for seamless scaling.
-}
+% \projectItem{NeuroTone.AI}{ML for Neurological Disorder Detection | Dr. Siddharth} {}{https://ai3011.plaksha.edu.in/spring2024.html\#parkinson}{
+%     \item \textbf{Led a 4-person team} to develop an \textbf{audio-based Parkinson's detection model} with \textbf{87.46\% accuracy}.
+%     \item Implemented \textbf{multi-layer Neural Net} architecture, improving \textbf{precision by 15\%} over previous models.
+%     \item \textbf{World's first} Parkinson's detection model that supports \textbf{multilingual} speech samples with \textbf{>80\% accuracy}.
+% }
 % \bulletSep
+
+
+\projectItem{Proofie}{Automated Grade Verification for University Admissions | Next.js, LLMs, NLP, PostgreSQL} {}{proofie.vercel.app}{
+
+    \item Engineered full-stack web application using distributed architecture for student admissions document verification
+    \item Reduced document validation errors by 30\% using Claude Sonnet 3.5 by optimizing model hyperparameters
+    \item Implemented real-time progress tracking system, reducing admissions team workload by 35 hours/week
+    \item Deployed scalable solution on AWS processing 500+ applications daily with 99.9\% uptime
+}
 \bulletSep
 
+\projectItem{ImageCraft}{Full-stack AI Image Processing Platform | Pytorch, Flask, React, Docker | Open Source}{}{https://image-craft-frontend.vercel.app/}{
+    
+    \item Implemented image classification achieving 82\% accuracy using MobileNetV3, fine-tuned on 15,000+ images
+    \item Created image-to-text captioning model (0.74 BLEU score) using ViT-GPT-2 architecture on COCO dataset
+    \item Built distributed Flask backend with Celery for concurrent request handling, reducing response time by 3x
+    % \item Containerized application using Docker for seamless deployment across Unix/Linux environments
+    % \item Containerized the application using Docker and deployed it on Docker\textbf{ }Hub
+}
+\bulletSep
+
+% \projectItem{NeuroTone.AI}{ML for Neurological Disorder Detection | Dr. Siddharth} {}{https://ai3011.plaksha.edu.in/spring2024.html\#parkinson}{
+%     \item Led a 4-person team to develop an audio-based Parkinson's detection model with 87.46\% accuracy.
+%     \item Implemented multi-layer Neural Net architecture, improving precision by 15\% over previous models.
+%     \item World's first Parkinson's detection model that supports multilingual speech samples with >80\% accuracy.
+% }
+% \bulletSep
 
 \projectItem{PodPit}{AI-driven podcast generation platform | Llama2, React, Flask, TailwindCSS | HackPlaksha’24}{}{https://devfolio.co/projects/podnews-1159}{
-
-
-    \item Engineered an end-to-end \textbf{AI podcast  platform} that generates \textbf{20-minute podcasts} in just \textbf{3 minutes}.     \vspace{0.7mm}
-
-    \item Integrated \textbf{Llama2} for \textbf{Natural Language Generation}, \textbf{gTTS}, and \textbf{RVC} for human like voice quality.    \vspace{0.7mm}
-
-    \item Enhanced user experience with \textbf{personalized accounts} by implementing \textbf{JWT token-based authentication}.
+    \item Engineered end-to-end AI platform generating 20-minute podcasts in 3 minutes using natural language processing
+    \item Integrated LLM for high-quality text generation and implemented speech segmentation algorithms
+    \item Designed scalable system architecture handling concurrent user requests with optimized data storage solutions
 }
 
-\sectionSep
 
-
-
-% ----------- Skills -----------
-
-\header{Skills}
-
-\textbf{Languages |} Python, C/C++, JavaScript, Bash, MATLAB, HTML/CSS, SQL (PostgreSQL)
-\\
-\textbf{Frameworks |} Django, Flask, Express.js, React, LangChain, TailwindCSS, Next.js \\
-\textbf{Tools/Tech |} Unix/Linux, Git, GCP, AWS (S3, SageMaker, EC2), Docker, HuggingFace, Postman, MongoDb
-% \textbf{Others |} PyTorch, Tensorflow, scikit-learn, Pandas, Shell Scripting, Natural Language Processing, Deep Learning
-
-% \begin{tabular}{ l l }
-%     \textbf{Languages} & Python, C/C++, JavaScript, Bash, MATLAB, HTML/CSS, SQL (PostgreSQL) \\
-%     \textbf{Frameworks} & Django, Flask, Express.js, React, LangChain, TailwindCSS, Next.js \\
-%     \textbf{Tools/Tech} & Unix/Linux, Git, GCP, AWS (S3, SageMaker, EC2), Docker, HuggingFace, Postman, MongoDB \\
-%     % \textbf{Others} & PyTorch, TensorFlow, scikit-learn, Pandas, Shell Scripting, Natural Language Processing
-% \end{tabular}
-
-\sectionSep
 
 %------------Leadership--------------
-\header{Leadership \& Extracurricular}
 
-\volunteerItem{Open Source | GSSOC'24}{Contributor}{}{
-    \vspace{0.7mm}
+% \sectionSep
 
-\item Contributed to more than \textbf{8 organizations}, resolving 25+ issues in AI/ML and Python backend projects. \hfill \link{https://gssoc.girlscript.tech/}{Link}}
+% \header{Leadership \& Extracurricular}
 
-% Integrated the \textbf{forecasting tool} with existing company systems, reducing \textbf{manual data-entry time by 60\%}
-\bulletSep
+% \volunteerItem{Open Source | GSSOC'24}{Conributor}{}{
+% \item Contributed to more than \textbf{8 organizations}, resolving 25+ issues in AI/ML and Python backend projects. \hfill \link{https://gssoc.girlscript.tech/}{Link}}
 
-\volunteerItem{Healthec.AI}{Project Lead | Javascript, GPT3, Node.js, Nginx}{}{    
-    \vspace{0.7mm}
+% % Integrated the \textbf{forecasting tool} with existing company systems, reducing \textbf{manual data-entry time by 60\%}\bulletSep
 
-\item Led a team of 6 and developed a \textbf{remote healthcare platform}, to increase \textbf{healthcare access in rural India}. 
-    \vspace{0.7mm}
+%     \bulletSep
 
-\item Recognized at \textbf{United Nations} and \textbf{IIT Mandi's} Himalayan Startup Trek 2023.\hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link}}
+% \volunteerItem{Healthec.AI}{Project Lead}{}{    
+% \item Led a team of 6 and developed a remote healthcare platform, to increase healthcare access in rural India. 
+% \item Recognized at \textbf{United Nations} and \textbf{IIT Mandi's} Himalayan Startup Trek 2023.\hfill \link{https://www.millenniumfellows.org/meet-the-fellows/2023/pu/pratik-rana}{Link}}
 
 
 % \bulletSep
@@ -326,6 +320,19 @@
 % \tinyBulletSep
 % \textbf{Health Care Volunteer:} Assisted in establishing first-stop checkpoints at CHCs in Kangra District and facilitated vaccination registrations for the initiatives sponsored by the WHO, UNICEF India, and CBSE. \link{https://linktr.ee/pratikrana}{[Link]}
 
+\sectionSep
 
+% ----------- Skills -----------
 
+\header{Skills}
+
+\textbf{Languages:}  Python, C++, Java, Go, SQL (PostgreSQL), JavaScript, Bash (Shell Scripting)
+\\
+\textbf{Tech:} TensorFlow, PyTorch, React, FastAPI, AWS, Docker, PostgreSQL, MongoDB, Git, Unix/Linux, TCP/IP\\
+\textbf{Focus:} Machine Learning, Distributed Systems, API Development, Information Retrieval, Natural Language Processing\\
+% \textbf{Others:} PyTorch, Tensorflow, scikit-learn, Pandas, Shell Scripting, Natural Language Processing, Deep Learning
+
+% (CONTENT HERE: REDACTED TO SAVE SPACE IN THIS SAMPLE)
+
+\vfill
 \end{document}
